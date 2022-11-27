@@ -10,6 +10,13 @@ KLOR is 36-42 keys column-staggered split keyboard. It supports a per key RGB ma
 
 ***
 
+
+## Sadek KS-27 mod
+
+**Please note: This is a modded version of the KLOR using soldered KS-27 switches instead of MX hotswap. I also removed the trackball support in the process to simplify routing**
+
+Everything below is the original README for the KLOR.
+
 ## LAYOUTS
 
 ![KLOR layouts](/docs/images/klor-layouts.svg)

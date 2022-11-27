@@ -1,5 +1,11 @@
 # KLOR PCB FILES
 
+## Sadek KS-27 mod
+
+**Please note: This is a modded version of the KLOR using soldered KS-27 switches instead of MX hotswap. I also removed the trackball support in the process to simplify routing**
+
+Everything below is the original README for the KLOR.
+
 ## MANUFACTURING
 If you want to get the PCB made you need to download the [ZIP](/PCB/klor1_3/KLOR_1-3_gerbers.zip/) and upload it to the website of the manufacture ([JLCPCB](https://jlcpcb.com/) for example).
 
