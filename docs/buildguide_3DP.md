@@ -6,7 +6,7 @@
 
 | Part name     | Count | Remarks | 
 | :------------ | :---: | :------ |
-| KLOR PCB      | 02 | You can find the files for it [here](/PCB/readme.md) |
+| KLOR PCB      | 02 | You can find the files for it [here](/PCB/) |
 | ProMicro      | 02 | Alternatively, you can use another controller with a similar pinout like the Elite-C, Puchi-C, KB2040 dda. |
 | MX Key switch | 42 | 40 switches for Konrad / 38 switches for Yubitsume / 36 switches for Saegewerk |
 | switch socket | 42 | 40 sockets for Konrad / 38 sockets for Yubitsume / 36 sockets for Saegewerk |
@@ -14,10 +14,10 @@
 | 1u MX keycaps | 42 | 40 keycaps for Konrad / 38 keycaps for Yubitsume / 36 keycaps for Saegewerk |
 | OLED module   | 02 | SSD1306 128x64 pixel OLED Displays |
 | reset button  | 02 | Alps SKRTLAE010 |
-| TRRS jack     | 02 | |
+| TRRS jack     | 02 | MJ-4PP-9 or PJ320A |
 | TRRS cable    | 01 | Alternatively, you can use a TRS cable for [half-duplex](https://github.com/qmk/qmk_firmware/blob/master/docs/serial_driver.md#usart-half-duplex)|
 | EC11 encoder  | 02 | You can use any EC11 encoder, but it will look better if you use a short one, like the EC11N1524402 |
-| encoder knob  | 02 | The design works best with a 2,2cm encoder knob. I'd recommend kilo international knobs with a number starting with 90. 
+| encoder knob  | 02 | The design works best with a 2,2cm encoder knob. I'd recommend kilo international knobs with a number starting with 90. You could also use the [knob](/knob/) I designed for the KLOR, based on the kilo knob. 
 | USB cable     | 01 | For connecting the keyboard with your PC |
 
 
@@ -27,7 +27,7 @@
 | :--------------------- | :---: | :------ |
 | MCU sockets            | 04 | For socketing your MCU. Highly recommended |
 | MCU pins               | 48 | In combinatin with the MCU sockets |
-| SK6812 Mini LED        | 42 | 40 LEDs for Konrad / 38 LEDs for Yubitsume / 36 LEDs for Saegewerk |
+| SK6812 Mini LED (not Mini-E)       | 42 | 40 LEDs for Konrad / 38 LEDs for Yubitsume / 36 LEDs for Saegewerk |
 | [Haptic Feedback Module](https://shop.pimoroni.com/products/drv2605l-linear-actuator-haptic-breakout) | 01 | Pimoroni Haptic Buzz |
 | speaker                | 01 | Mallory AST1109MLTRQ or Keliking KLJ-1102 |
 | [trackball](https://bit-trade-one.co.jp/selfmadekb/adtb7m/) | 01 | Pixart PAW3204OA. Available at [Yushakobo](https://shop.yushakobo.jp/products/adtb7m) |
@@ -42,7 +42,7 @@
 | 3D printed case        | 02 | Find the case files [here](/case/3DP) |
 | acrylic parts          | 02 | Three parts and one ring per side |
 | switch plate           | 02 | 1.5mm switch plate |
-| 7mm M2 standoffs       | 16 | |
+| 7mm M2 standoffs       | 16 | round |
 | 6mm M2 screws          | 16 | |
 | 6mm M2 countersunk screws | 16 | The bottom only supports countersunk screws |
 
@@ -118,32 +118,6 @@ You can use flush cutters to trim the header pins.
 
 ***
 
-## DIODES
-
-The diodes needs to be soldered on the bottomm of the PCB. Pay attention to their orientation:  They have a small line on one side, which should be on the side the arrow on the PCB is facing to.
-
-<p align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="/docs/images/buildguide/diodes_dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="/docs/images/buildguide/diodes_bright.svg">
-  <img alt="diode orientation" src="/docs/images/buildguide/diodes_dark.svg">
-</picture>
-</p>
-
-Apply a small amount of solder on one pad.
-
-![Solder on one pad](/docs/images/buildguide/diode_solder_pad.jpg)
-
-
-Then use tweezers to place the diode on the pads and reheat the solder to secure the diode.
-
-![Solder diode](/docs/images/buildguide/diode_in_place.jpg)
-
-
-Now you can solder the second pad.
-
-***
-
 ## LEDS (optional)
 
 > **Note**
@@ -191,6 +165,32 @@ This graphic shows the order in which the LEDs are chained together.
 
 ***
 
+## DIODES
+
+The diodes needs to be soldered on the bottomm of the PCB. Pay attention to their orientation:  They have a small line on one side, which should be on the side the arrow on the PCB is facing to.
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/docs/images/buildguide/diodes_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="/docs/images/buildguide/diodes_bright.svg">
+  <img alt="diode orientation" src="/docs/images/buildguide/diodes_dark.svg">
+</picture>
+</p>
+
+Apply a small amount of solder on one pad.
+
+![Solder on one pad](/docs/images/buildguide/diode_solder_pad.jpg)
+
+
+Then use tweezers to place the diode on the pads and reheat the solder to secure the diode.
+
+![Solder diode](/docs/images/buildguide/diode_in_place.jpg)
+
+
+Now you can solder the second pad.
+
+***
+
 ## SWITCH SOCKETS
 
 Here you can apply the same technique as used for the diodes: Apply some solder on one of the pads first.
@@ -208,7 +208,7 @@ Now solder the second pad.
 
 ## RESET SWITCHES
 
-The reset switches are a bit fiddly to solder. It helps to apply a really thin film of solder to the pads first. Then hold the switch in place with tweezers and solder the big pads on the left and right of the switch (they do not fulfill any electrical purpose, but serve to hold the switches in place). If the switch is seated corretly reheat the solder pads under the switch to connect it. 
+The reset switches are a bit fiddly to solder. It helps to apply a really thin film of solder to the pads first and use a lof of flux. Then hold the switch in place with tweezers and solder the big pads on the left and right of the switch (they do not fulfill any electrical purpose, but serve to hold the switches in place). If the switch is seated corretly reheat the solder pads under the switch to connect it. 
 
 ![reset switch](/docs/images/buildguide/reset_switch.jpg)
 
@@ -219,8 +219,6 @@ The reset switches are a bit fiddly to solder. It helps to apply a really thin f
 
 Install the TRRS jack on the top side of the PCB. The place where you should insert it is marked with a white line.
 You may want to use some masking tape to hold it in place, since you need to solder it on the bottom.
-
-![TRRS jack taped](/docs/images/buildguide/TRRS_tape.jpg)
 
 ![TRRS jack soldered](/docs/images/buildguide/TRRS.jpg)
 
@@ -258,7 +256,7 @@ You can also use a screw and a nut to stabilize the module further. But this ste
 ## SPEAKER (optional)
 
 > **Note**
-> Currently haptic feedback only works on the primary side of your keyboard, which is a limitation of QMK. Unfortunately, the audio feature of QMK doesn't work yet with the RP2040.
+> Currently the speaker only works on the primary side of your keyboard, which is a limitation of QMK. Currently you need to use [this PR](https://github.com/qmk/qmk_firmware/pull/17723) to make the audio feature work with the RP2040.
 
 Soldering the speaker is pretty simple. Apply a tiny bit solder on one of the pads, use tweezers to hold the speaker in place and reheat the solder. After that apply solder to the other pad.
 

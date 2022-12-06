@@ -6,7 +6,7 @@
 
 | Part name     | Count | Remarks | 
 | :------------ | :---: | :------ |
-| KLOR PCB      | 02 | You can find the files for it [here](/PCB/readme.md) |
+| KLOR PCB      | 02 | You can find the files for it [here](/PCB/) |
 | ProMicro      | 02 | Alternatively, you can use another controller with a similar pinout like the Elite-C, Puchi-C, KB2040 dda. |
 | MX Key switch | 42 | 40 switches for Konrad / 38 switches for Yubitsume / 36 switches for Saegewerk |
 | switch socket | 42 | 40 sockets for Konrad / 38 sockets for Yubitsume / 36 sockets for Saegewerk |
@@ -14,10 +14,10 @@
 | 1u MX keycaps | 42 | 40 keycaps for Konrad / 38 keycaps for Yubitsume / 36 keycaps for Saegewerk |
 | OLED module   | 02 | SSD1306 128x64 pixel OLED Displays |
 | reset button  | 02 | Alps SKRTLAE010 |
-| TRRS jack     | 02 | |
+| TRRS jack     | 02 | MJ-4PP-9 or PJ320A |
 | TRRS cable    | 01 | Alternatively, you can use a TRS cable for [half-duplex](https://github.com/qmk/qmk_firmware/blob/master/docs/serial_driver.md#usart-half-duplex)|
 | EC11 encoder  | 02 | You can use any EC11 encoder, but it will look better if you use a short one, like the EC11N1524402 |
-| encoder knob  | 02 | The design works best with a 2,2cm encoder knob. I'd recommend kilo international knobs with a number starting with 90. 
+| encoder knob  | 02 | The design works best with a 2,2cm encoder knob. I'd recommend kilo international knobs with a number starting with 90. You could also use the [knob](/knob/) I designed for the KLOR, based on the kilo knob. 
 | USB cable     | 01 | For connecting the keyboard with your PC |
 
 
@@ -27,7 +27,7 @@
 | :--------------------- | :---: | :------ |
 | MCU sockets            | 04 | For socketing your MCU. Highly recommended |
 | MCU pins               | 48 | In combinatin with the MCU sockets |
-| SK6812 Mini LED        | 42 | 40 LEDs for Konrad / 38 LEDs for Yubitsume / 36 LEDs for Saegewerk |
+| SK6812 Mini LED (not Mini-E)        | 42 | 40 LEDs for Konrad / 38 LEDs for Yubitsume / 36 LEDs for Saegewerk |
 | [Haptic Feedback Module](https://shop.pimoroni.com/products/drv2605l-linear-actuator-haptic-breakout) | 01 | Pimoroni Haptic Buzz |
 | speaker                | 01 | Mallory AST1109MLTRQ or Keliking KLJ-1102 |
 | [trackball](https://bit-trade-one.co.jp/selfmadekb/adtb7m/) | 01 | Pixart PAW3204OA. Available at [Yushakobo](https://shop.yushakobo.jp/products/adtb7m) |
@@ -39,10 +39,10 @@
 
 | Part name              | Count | Remarks | 
 | :--------------------- | :---: | :------ |
-| acrylic parts          | 02 | Find the case files [here](https://github.com/GEIGEIGEIST/KLOR/tree/main/case/acrylic) |
+| acrylic parts          | 02 | Find the case files [here](/case/acrylic/) |
 | switch plate           | 02 | 1.5mm switch plate |
-| 9mm M2 standoffs       | 22 | Up to 22 9mm standoffs for the actual case (check the appropiate puzzleguide) |
-| 7mm M2 standoffs       | 12 | 7mm standoffs for holding the PCB in place |
+| 9mm M2 standoffs       | 22 | Up to 22 9mm round standoffs for the actual case (check the appropiate puzzleguide) |
+| 7mm M2 standoffs       | 12 | 7mm round standoffs for holding the PCB in place |
 | 6mm M2 screws          | 56 | Up to 56 regular 6mm M2 screws (check the appropiate puzzleguide) |
 | 5mm M2 wafer head screws | 12 | These screws need a flat head to fit under the acrylic top layer |
 
@@ -115,32 +115,6 @@ You can use flush cutters to trim the header pins.
 
 ***
 
-## DIODES
-
-The diodes needs to be soldered on the bottomm of the PCB. Pay attention to their orientation:  They have a small line on one side, which should be on the side the arrow on the PCB is facing to.
-
-<p align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="/docs/images/buildguide/diodes_dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="/docs/images/buildguide/diodes_bright.svg">
-  <img alt="diode orientation" src="/docs/images/buildguide/diodes_dark.svg">
-</picture>
-</p>
-
-Apply a small amount of solder on one pad.
-
-![Solder on one pad](/docs/images/buildguide/diode_solder_pad.jpg)
-
-
-Then use tweezers to place the diode on the pads and reheat the solder to secure the diode.
-
-![Solder diode](/docs/images/buildguide/diode_in_place.jpg)
-
-
-Now you can solder the second pad.
-
-***
-
 ## LEDS (optional)
 
 > **Note**
@@ -184,6 +158,32 @@ The advantage of soldering in the microcontroller first is that you can occasion
 This graphic shows the order in which the LEDs are chained together.
 
 ![KLOR LED order](/docs/images/KLOR_LEDorder.png)
+
+***
+
+## DIODES
+
+The diodes needs to be soldered on the bottomm of the PCB. Pay attention to their orientation:  They have a small line on one side, which should be on the side the arrow on the PCB is facing to.
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/docs/images/buildguide/diodes_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="/docs/images/buildguide/diodes_bright.svg">
+  <img alt="diode orientation" src="/docs/images/buildguide/diodes_dark.svg">
+</picture>
+</p>
+
+Apply a small amount of solder on one pad.
+
+![Solder on one pad](/docs/images/buildguide/diode_solder_pad.jpg)
+
+
+Then use tweezers to place the diode on the pads and reheat the solder to secure the diode.
+
+![Solder diode](/docs/images/buildguide/diode_in_place.jpg)
+
+
+Now you can solder the second pad.
 
 ***
 
