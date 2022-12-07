@@ -1,3 +1,9 @@
+# Sadek KS-27 mod
+
+**Please note: This is a modded version of the KLOR using soldered KS-27 switches instead of MX hotswap. I also removed the trackball support in the process to simplify routing. The cases in this repository do not work with this PCB. I did make a case for saegewerk, and may make more in the future. To see these cases, go here: https://github.com/sadekbaroudi/keyboard-cases/tree/master/KLOR **
+
+Everything below is the original README for the KLOR.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/docs/images/klor-font-logo-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="/docs/images/klor-font-logo-bright.svg">
@@ -9,13 +15,6 @@
 KLOR is 36-42 keys column-staggered split keyboard. It supports a per key RGB matrix, encoders, OLED displays, haptic feedback, speakers, a Pixart Paw3204 trackball, the [SplitKB tenting puck](https://splitkb.com/products/tenting-puck) and four different layouts, through brake off parts.
 
 ***
-
-
-## Sadek KS-27 mod
-
-**Please note: This is a modded version of the KLOR using soldered KS-27 switches instead of MX hotswap. I also removed the trackball support in the process to simplify routing**
-
-Everything below is the original README for the KLOR.
 
 ## LAYOUTS
 
