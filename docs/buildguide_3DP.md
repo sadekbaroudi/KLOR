@@ -46,6 +46,19 @@
 | 6mm M2 screws          | 16 | |
 | 6mm M2 countersunk screws | 16 | The bottom only supports countersunk screws |
 
+## IMPORTANT DIFFERENCES BETWEEN ORIGINAL AND KS-27 EDITION
+
+In this version, there are some changes that require slightly different build instructions.
+
+1) You will need to use the KLOR KS-27 case, found here: https://github.com/sadekbaroudi/keyboard-cases/tree/master/KLOR
+
+2) Controller: Solder it on top, with the components facing the pcb. With the case provided, your headers should not exceed the standard height of 2.54.
+
+3) OLED: To place the oled at the correct height, solder the controller, then place the OLED in the through holes. Before you solder, put the pcb into the case and push the oled as far as you can towards the case so that the screen is just below the lip of the hole in the case. If you don't do this, the OLED will be recessed into the case when you assemble it.
+
+4) Important: Given this is not using hotswap sockets, and the controller isn't socketed, you won't have access to the controller once you assemble everything. So, PLEASE confirm the controller is flashed properly before you assemble.
+
+4.1) If you are using the splinky ( https://github.com/plut0nium/0xB2/ ), there are two pads on the back next to pins 7 and 8. You can solder some wires to these two pads and run them under the board through one of the mounting holes or tenting puck holes. This will allow you to hard reset the controller even after you assemble. You can do this by shorting those two wires, and while they are shorted, then short reset and gnd. This will prompt the bootloader reflash.
 
 ## INTRODUCTION
 
