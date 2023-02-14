@@ -1,6 +1,6 @@
-# Sadek KS-27 mod
+# Sadek KS-27 and choc v1 mods
 
-**Please note: This is a modded version of the KLOR using soldered KS-27 switches instead of MX hotswap. I also removed the trackball support in the process to simplify routing. The cases in this repository do not work with this PCB. I did make a case for saegewerk, and may make more in the future. To see these cases, go here: https://github.com/sadekbaroudi/keyboard-cases/tree/master/KLOR **
+**Please note: This is a modded version of the KLOR using soldered KS-27 or choc v1 switches instead of MX hotswap. I also removed the trackball support in the process to simplify routing. The cases in this repository do not work with this PCB. I did make a case for saegewerk, and may make more in the future. To see these cases, go here: https://github.com/sadekbaroudi/keyboard-cases/tree/master/KLOR **
 
 Everything below is the original README for the KLOR.
 
